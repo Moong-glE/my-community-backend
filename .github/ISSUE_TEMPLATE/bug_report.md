@@ -7,23 +7,23 @@ assignees: ''
 
 ---
 
-## 증상
+## Symptom
 
 
 
-## 시나리오
+## Scenario
 
 
 
-## 스크린샷
+## Screenshoot
 
 
 
-## response
+## Response
 ```
 ```
 
 
-## server log
+## Server log
 ```py
 ```
