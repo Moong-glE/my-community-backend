@@ -1,10 +1,10 @@
 # Team Moon-glE Contributing Guidelines
 
-Please follow these guidelines when you are trying to contribute to MCIP software.
+Please follow these guidelines when you are trying to contribute to **My Community** software.
 
 ## Language
 
-We **_prefer English and Korean_** due to all of our team member is Korean, we prefer Korean. So it is strongly recommended to use Korean. But it needs to conversate in gobally, we also prefer the English.
+We **_prefer English and Korean_** due to all of our team member is Korean, we prefer Korean. So it is strongly recommended to use Korean. But it needs to conversate in globally, we also prefer the English.
 
 ## Code Formatting
 
@@ -25,18 +25,16 @@ Refer to [here](http://karma-runner.github.io/0.10/dev/git-commit-msg.html) and 
 - feat (new feature)
 - fix (bug fix)
 - refactor (refactoring production code)
-- style (formatting, missing semi colons, etc; no code change)
 - test (adding missing tests, refactoring tests; no production code change)
 
 **Examples**
 
-- `chore: add Oyster build script`
-- `docs: explain hat wobble`
-- `feat: add beta sequence`
-- `fix: remove broken confirmation message`
-- `refactor: share logic between 4d3d3d3 and flarhgunnstow`
-- `style: convert tabs to spaces`
-- `test: ensure Tayne retains clothing`
+- `chore: Add Oyster build script`
+- `docs: Explain hat wobble`
+- `feat: Add beta sequence`
+- `fix: Remove broken confirmation message`
+- `refactor: Share logic between 4d3d3d3 and flarhgunnstow`
+- `test: Ensure Tayne retains clothing`
 
 > You can also use other types like `misc:`, `design:`, `types:`, `deps:` or whatever that fit well with your works.
 
@@ -44,14 +42,14 @@ Refer to [here](http://karma-runner.github.io/0.10/dev/git-commit-msg.html) and 
 
 **Examples**
 
-- `Update README.md`
-- `Add assets`
+- `chore : Update README.md`
+- `feat: Add assets`
 
 ## Pull Requests
 - There are 2 types of _PULL_REQUEST_TEMPLATE_, **feature-template** and **bug-template**
 - Follow our _Pull request template_ **STRICTLY** when you hang out the pull request
 - **feature-template**
-- `Function description
+- `Function description`
 - `Code description`
 - **bug-template**
 - `Bug description`
