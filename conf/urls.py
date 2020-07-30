@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from mycomm.urls import urlpatterns as mycomm_url_patterns
 
 urlpatterns = [
-    url(r"^admin/", admin.site.urls),
-]
+                  url(r"^admin/", admin.site.urls),
+              ] + mycomm_url_patterns
