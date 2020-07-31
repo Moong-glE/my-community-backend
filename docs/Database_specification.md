@@ -121,7 +121,36 @@
 
 ## 11. Calander
 
+- Id (PK)
+- Description
+- StartAt
+- EndAt
+- Article_Id (FK, 1)
+
 
 
 ## 12. Survey
 
+- Id (PK)
+- Question_Ids (FK, N)
+- ExpiredAt
+- isExpired
+- Article_Id (FK, 1)
+
+
+
+## 13. SurveyQuestion
+
+- Id (PK)
+- Question
+- Survey_Id (FK, 1)
+- Answer_Ids (FK, N)
+
+
+
+## 13. SurveyAnswer
+
+- Id (Pk)
+- Answer
+- User_Id (FK, 1)
+- Question_Id (FK, 1)
