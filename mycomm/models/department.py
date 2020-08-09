@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class Department(models.Model):
     name = models.CharField(
         verbose_name='학과 이름',
