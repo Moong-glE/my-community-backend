@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     # Third party apps
     "rest_framework",
     "corsheaders",
+    "mycomm",
 ]
 
 MIDDLEWARE = [
@@ -61,6 +62,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "conf.wsgi.application"
 
+AUTH_USER_MODEL = 'mycomm.User'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
