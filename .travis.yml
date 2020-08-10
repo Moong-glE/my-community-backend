@@ -10,4 +10,4 @@ script:
   - pytest
 
   # pylint
-  - pylint conf || exit 0
+  - pylint conf mycomm
