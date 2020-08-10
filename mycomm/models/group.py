@@ -28,22 +28,6 @@ class Group(models.Model):
         related_name='department_group'
     )
 
-    board = models.Many(
-        verbose_name='보드',
-        to=Board,
-        on_delete=models.CASCADE,
-        null=False,
-        related_name='board_group'
-    )
-
-    user = models.ForeignKey(
-        verbose_name='사용자 명단',
-        to=User,
-        on_delete=models.CASCADE,
-        null=False,
-        related_name='user_group'
-    )
-
     managers = models.ForeignKey(
         verbose_name='관리자 명단',
         to=User,
