@@ -1,7 +1,7 @@
-from .base import *
-
 import configparser
 import sys
+
+from .base import *
 
 DEBUG = False
 
