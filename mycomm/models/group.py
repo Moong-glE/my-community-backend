@@ -1,12 +1,12 @@
 from django.db import models
 
-from mycomm.models.board import Board
 from mycomm.models.department import Department
 from mycomm.models.user import User
 
+
 class Group(models.Model):
     name = models.CharField(
-        verbose_name="그룹 이름",
+        verbose_name="이름",
         max_length=255,
         null=False,
         blank=False
@@ -17,7 +17,6 @@ class Group(models.Model):
         max_length=255,
         null=False,
         blank=True
-        # 이거 다른애들 False 로 했던데...
     )
 
     department = models.ForeignKey(
@@ -28,10 +27,10 @@ class Group(models.Model):
         related_name='department_group'
     )
 
-    managers = models.ForeignKey(
-        verbose_name='관리자 명단',
+    manager = models.ForeignKey(
+        verbose_name='관리자',
         to=User,
-        on_delete=models.CASCADE,
+        on_delete=models.SET_NULL,
         null=False,
         related_name='manager_group'
     )
