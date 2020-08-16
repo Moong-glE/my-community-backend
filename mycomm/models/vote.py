@@ -1,3 +1,4 @@
+from django.contrib.postgres import fields
 from django.db import models
 
 from mycomm.models.article import Article
@@ -15,7 +16,7 @@ class Vote(models.Model):
         verbose_name='제목',
         max_length=255,
         null=False,
-        blank = False
+        blank=False
     )
 
     expired_at = models.DateTimeField(
@@ -29,8 +30,10 @@ class Vote(models.Model):
         default=False
     )
 
-    answer_item_list = models.ListCharField(
+    answer_item_list = fields.ArrayField(
         verbose_name='항목 리스트',
-        max_length=255,
-        null=False
+        base_field=models.CharField(
+            max_length=255,
+            null=False
+        )
     )

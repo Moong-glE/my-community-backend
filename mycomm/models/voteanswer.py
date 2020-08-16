@@ -1,3 +1,4 @@
+from django.contrib.postgres import fields
 from django.db import models
 
 from mycomm.models.user import User
@@ -19,8 +20,10 @@ class VoteAnswer(models.Model):
         null=False
     )
 
-    answer_list = models.ListCharField(
+    answer_list = fields.ArrayField(
         verbose_name='답변 리스트',
-        max_length=255,
-        null=False
+        base_field=models.CharField(
+            max_length=255,
+            null=False
+        )
     )
