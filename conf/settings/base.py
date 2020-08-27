@@ -24,9 +24,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.sites",
     # Third party apps
     "rest_framework",
     "corsheaders",
+    "rest_auth",
+    "rest_auth.registration",
     # Our app
     "mycomm",
 ]
@@ -125,10 +128,10 @@ JWT_AUTH = {
         'rest_framework_jwt.utils.jwt_decode_handler',
 
     'JWT_PAYLOAD_HANDLER':
-        'mycomm.jwt.jwt_payload_handler',
+        'rest_framework_jwt.utils.jwt_payload_handler',
 
     'JWT_RESPONSE_PAYLOAD_HANDLER':
-        'mycomm.jwt.jwt_response_payload_handler',
+        'rest_framework_jwt.utils.jwt_response_payload_handler',
 
     'JWT_SECRET_KEY': SECRET_KEY,
     'JWT_ALGORITHM': 'HS256',
