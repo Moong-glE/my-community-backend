@@ -29,6 +29,8 @@ INSTALLED_APPS = [
     # Third party apps
     "rest_framework",
     "corsheaders",
+    "rest_auth",
+    "allauth",
     # Our app
     "mycomm",
 ]
@@ -116,8 +118,6 @@ REST_FRAMEWORK = {
     ),
     "DEFAULT_AUTHENTICATION_CLASSES": (
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
     ),
 }
 
@@ -131,6 +131,15 @@ jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
 payload = jwt_payload_handler(user)
 token = jwt_encode_handler(payload)
 """
+
+AUTH_USER_MODEL = 'mycomm.User'
+
+REST_AUTH_SERIALIZERS = {
+    'LOGIN_SERIALIZER': 'mycomm.serializers.user.UserSerializer',
+    'REGISTER_SERIALIZER': 'mycomm.serializers.user.UserCreateSerializer',
+    'JWT_SERIALIZER': 'rest_auth.serializers.JWTSerializer',
+    'USER_DETAILS_SERIALIZER': 'mycomm.serializers.user.UserDetailSerializer',
+}
 
 SECRET_KEY = get_random_secret_key()
 
@@ -159,3 +168,7 @@ JWT_AUTH = {
 
     'JWT_AUTH_HEADER_PREFIX': 'JWT',
 }
+
+REST_USE_JWT = True
+
+ACCOUNT_EMAIL_VERIFICATION = None

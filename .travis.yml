@@ -17,4 +17,4 @@ script:
   - pytest
 
   # pylint
-  - pylint conf mycomm
+  - pylint conf mycomm --errors-only
