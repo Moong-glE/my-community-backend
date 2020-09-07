@@ -32,7 +32,7 @@ class DeptApply(models.Model):
         related_name='reviewer_dept_apply'
     )
 
-    department = models.ManyToManyField(
+    department = models.ForeignKey(
         verbose_name="학과",
         to=Department,
         on_delete=models.CASCADE,
