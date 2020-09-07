@@ -32,8 +32,8 @@ class GroupApply(models.Model):
         related_name='reviewer_group_apply'
     )
 
-    group = models.ManyToManyField(
-        verbose_name="그룹 아이디",
+    group = models.ForeignKey(
+        verbose_name="그룹",
         to=Group,
         on_delete=models.CASCADE,
         null=False,
