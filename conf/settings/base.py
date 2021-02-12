@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 import os
 import datetime
+from decouple import config
 from django.core.management.utils import get_random_secret_key
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -28,8 +29,6 @@ INSTALLED_APPS = [
     # Third party apps
     "rest_framework",
     "corsheaders",
-    "rest_auth",
-    "rest_auth.registration",
     # Our app
     "mycomm",
 ]
@@ -92,6 +91,21 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+# Database
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config('POSTGRE_NAME'),
+        'USER': config('POSTGRE_USER'),
+        'PASSWORD': config('POSTGRE_PASSWORD'),
+        'HOST': config('POSTGRE_HOST'),
+        'PORT': config('POSTGRE_PORT'),
+    }
+}
+
+# Site
+SITE_ID = 1
 
 # REST framework JWT
 # https://jpadilla.github.io/django-rest-framework-jwt/

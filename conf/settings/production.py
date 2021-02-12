@@ -16,7 +16,7 @@ STATIC_URL = "/static/"
 CORS_ORIGIN_WHITELIST = ("localhost:3000/",)
 
 config = configparser.ConfigParser()
-config.read("././config.ini")
+config.read("././settings.ini")
 
 for key, value in config["production"].items():
     setattr(sys.modules[__name__], key, value)

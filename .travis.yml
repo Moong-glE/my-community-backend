@@ -6,6 +6,13 @@ python:
 install:
   - pip install -r requirements.txt
 # command to run tests
+before_script:
+  - echo "[settings]" >> settings.ini
+  - echo "POSTGRE_NAME=mycomm" >> settings.ini
+  - echo "POSTGRE_USER=root" >> settings.ini
+  - echo "POSTGRE_PASSWORD=1234" >> settings.ini
+  - echo "POSTGRE_HOST=127.0.0.1" >> settings.ini
+  - echo "POSTGRE_PORT=5432" >> settings.ini
 script:
   - pytest
 
