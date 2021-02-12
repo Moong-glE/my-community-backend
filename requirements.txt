@@ -41,6 +41,7 @@ pylint==2.5.3
 pyparsing==2.4.7
 pytest==5.4.3
 pytest-django==3.9.0
+python-decouple==3.4
 python3-openid==3.2.0
 pytz==2020.1
 regex==2020.6.8

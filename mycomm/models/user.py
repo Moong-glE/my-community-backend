@@ -36,4 +36,4 @@ class User(AbstractUser):
         related_name='department_user'
     )
 
-    REQUIRED_FIELDS = ['email', 'studentId']
+    REQUIRED_FIELDS = ['email', 'student_id']
