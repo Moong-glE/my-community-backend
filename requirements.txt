@@ -38,6 +38,8 @@ psycopg2==2.8.5
 py==1.9.0
 PyJWT==1.7.1
 pylint==2.5.3
+pylint-django==2.4.2
+pylint-plugin-utils==0.6
 pyparsing==2.4.7
 pytest==5.4.3
 pytest-django==3.9.0

@@ -32,7 +32,7 @@ limit-inference-results=100
 
 # List of plugins (as comma separated values of python module names) to load,
 # usually to register additional checkers.
-load-plugins=
+load-plugins=pylint_django
 
 # Pickle collected data for later comparisons.
 persistent=yes
@@ -140,6 +140,9 @@ disable=print-statement,
         deprecated-sys-function,
         exception-escape,
         comprehension-escape,
+        C0114,
+        C0115,
+        C0116,
 # CUSTOM
         missing-module-docstring,
         missing-class-docstring,
@@ -595,6 +598,7 @@ max-statements=50
 # Minimum number of public methods for a class (see R0903).
 min-public-methods=2
 
+django-settings-module=conf.settings.base
 
 [EXCEPTIONS]
 

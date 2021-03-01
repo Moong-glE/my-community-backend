@@ -16,6 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from mycomm.views.auth import *
+
 urlpatterns = [
     url(r"^admin/", admin.site.urls),
+    url(r"^accounts/signin", MycommLoginView.as_view(), name='sign-in'),
+    url(r"^accounts/signup", MycommRegisterView.as_view(), name='sign-up'),
 ]
