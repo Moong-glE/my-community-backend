@@ -18,7 +18,7 @@ django-allauth==0.42.0
 django-cors-headers==3.4.0
 django-file-validator==0.0.7
 django-rest-auth==0.9.5
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 djangorestframework-jwt==1.11.0
 idna==2.9
 idna-ssl==1.1.0
